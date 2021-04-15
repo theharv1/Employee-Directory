@@ -1,5 +1,5 @@
 import React from 'react';
-
+// renders the employye list
 const EmployeeList = ({list=[]}) => {
   return (
     <>

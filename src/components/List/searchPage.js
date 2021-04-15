@@ -6,7 +6,7 @@ const SearchPage = (props) => {
   const [input, setInput] = useState('');
   const [employeeListDefault, setEmployeeListDefault] = useState();
   const [employeeList, setEmployeeList] = useState();
-
+// fetches API call
   const fetchData = async () => {
     const response = await axios.get('https://randomuser.me/api/?results=200&nat=us');
     const d = response.data.results;
@@ -27,7 +27,7 @@ const SearchPage = (props) => {
   }
 
   useEffect( () => {fetchData()},[]);
-
+//creates the jumbotron 
   return (
     <>
     <div className='jumbotron jumbotron-fluid'>
@@ -40,8 +40,9 @@ const SearchPage = (props) => {
       </div>
     </form> 
       </div>
-    </div>
-        <div className='container'>
+    </div> 
+    {/*populates the table with all information from the api */}
+        <div className='container'> 
             <table className='table table-stripped table-dark'>
           <thead>
           <tr>
